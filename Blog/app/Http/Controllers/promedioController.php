@@ -27,10 +27,9 @@ class promedioController extends Controller
         }
 
         if ($cantMaterias > 0) {
-            $promedio = $sumador / $cantMaterias;
-            echo '<h2>Promedio: ' . $promedio . '</h2>';
+            $promedio = $sumador / $cantMaterias;   // number
         } else {
-            echo '<h2>No hay materias para calcular el promedio.' . '</h2>';
+            $promedio = "No hay materias para calcular el promedio.";   // text
         }
         return view('PromedioNotas.promedio', ['cantMaterias' => $cantMaterias, 'promedio' => $promedio]); // , 'promediado' => true
     }
